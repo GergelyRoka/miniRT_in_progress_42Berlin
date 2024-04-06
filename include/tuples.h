@@ -6,14 +6,14 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:32:16 by groka             #+#    #+#             */
-/*   Updated: 2024/04/02 18:21:58 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/06 18:45:28 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TUPLES_H
 # define TUPLES_H
 
-#include <math.h>
+# include <math.h>
 
 typedef struct s_tuple
 {

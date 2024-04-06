@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: groka <groka@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 16:47:42 by groka             #+#    #+#             */
-/*   Updated: 2024/04/01 16:51:24 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/06 18:45:16 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,5 @@ t_color	color_sub(t_color c1, t_color c2);
 t_color	color_mul_scalar(t_color c, double scalar);
 t_color	color_mul(t_color c1, t_color c2);
 t_color	color_hadamard_product(t_color c1, t_color c2);
-
 
 #endif
