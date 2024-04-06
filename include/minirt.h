@@ -6,7 +6,7 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 13:01:29 by groka             #+#    #+#             */
-/*   Updated: 2024/04/06 18:40:06 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/06 20:27:51 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@
 # include "canvas.h"
 # include "matrices.h"
 
-# define PI 3.14159265358979323846
 # define EPSILON 0.00001
 # define HEIGHT 540
 # define WIDTH 960

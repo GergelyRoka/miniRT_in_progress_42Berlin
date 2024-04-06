@@ -6,12 +6,14 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 19:15:08 by groka             #+#    #+#             */
-/*   Updated: 2024/04/06 17:02:05 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/06 20:40:57 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATRICES_H
 # define MATRICES_H
+
+# define PI 3.14159265358f
 
 # include <stdbool.h>
 # include "tuples.h"
@@ -38,5 +40,13 @@ t_matrix	submatrix(t_matrix a, int row, int col);
 // matrices_c.c
 bool		is_invertible_matrix(t_matrix a);
 t_matrix	inverse_matrix(t_matrix a);
+
+// tranformations_a.c
+t_matrix	translation_matrix(double x, double y, double z);
+t_matrix	scaling_matrix(double x, double y, double z);
+t_matrix	rotation_x_matrix(double angle);
+t_matrix	rotation_y_matrix(double angle);
+t_matrix	rotation_z_matrix(double angle);
+
 
 #endif
