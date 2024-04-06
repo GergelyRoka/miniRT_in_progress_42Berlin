@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: groka <groka@student.42berlin.de>          +#+  +:+       +#+         #
+#    By: groka <groka@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/06 13:00:31 by groka             #+#    #+#              #
-#    Updated: 2024/03/27 11:20:38 by groka            ###   ########.fr        #
+#    Updated: 2024/04/06 18:37:49 by groka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,13 @@ SRCS	:=	source/main.c \
 			source/tuples/tuples_a.c \
 			source/tuples/tuples_b.c \
 			source/tuples/tuples_c.c \
+			source/colors/colors_a.c \
+			source/colors/colors_b.c \
+			source/canvas/canvas.c \
+			source/matrices/matrices_a.c \
+			source/matrices/matrices_b.c \
+			source/matrices/matrices_c.c \
+
 
 
 OBJS	:= ${SRCS:.c=.o}
