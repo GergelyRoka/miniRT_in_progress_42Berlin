@@ -6,7 +6,7 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 19:10:47 by groka             #+#    #+#             */
-/*   Updated: 2024/04/06 20:44:05 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/07 17:29:18 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,66 @@ int main( void )
 		printf("TEST rotation around Z axis, half and full quarter\n");
 		print_tuple(multiply_matrix_tuple(rotation_z_matrix(PI / 4), do_point(0, 1, 0)));
 		print_tuple(multiply_matrix_tuple(rotation_z_matrix(PI / 2), do_point(0, 1, 0)));
+	}
+	{
+		// Scenario: A shearing transformation moves x in proportion to y
+		// Given transform ← shearing(1, 0, 0, 0, 0, 0)
+		// And p ← point(2, 3, 4)
+		// Then transform * p = point(5, 3, 4)
+		printf("TEST shearings\n");
+		print_tuple(multiply_matrix_tuple(shearing_matrix(do_point(0, 1, 0), do_point(0, 0, 0), do_point(0, 0, 0)), do_point(2, 3, 4)));
+	}
+	{
+		// Scenario: A shearing transformation moves x in proportion to z
+		// Given transform ← shearing(0, 1, 0, 0, 0, 0)
+		// And p ← point(2, 3, 4)
+		// Then transform * p = point(6, 3, 4)
+		print_tuple(multiply_matrix_tuple(shearing_matrix(do_point(0, 0, 1), do_point(0, 0, 0), do_point(0, 0, 0)), do_point(2, 3, 4)));
+	}
+	{
+		// Scenario: A shearing transformation moves y in proportion to x
+		// Given transform ← shearing(0, 0, 1, 0, 0, 0)
+		// And p ← point(2, 3, 4)
+		// Then transform * p = point(2, 5, 4)
+		print_tuple(multiply_matrix_tuple(shearing_matrix(do_point(0, 0, 0), do_point(1, 0, 0), do_point(0, 0, 0)), do_point(2, 3, 4)));
+	}
+	{
+		// Scenario: A shearing transformation moves y in proportion to z
+		// Given transform ← shearing(0, 0, 0, 1, 0, 0)
+		// And p ← point(2, 3, 4)
+		// Then transform * p = point(2, 7, 4)
+		print_tuple(multiply_matrix_tuple(shearing_matrix(do_point(0, 0, 0), do_point(0, 0, 1), do_point(0, 0, 0)), do_point(2, 3, 4)));
+	}
+	{
+		// Scenario: A shearing transformation moves z in proportion to x
+		// Given transform ← shearing(0, 0, 0, 0, 1, 0)
+		// And p ← point(2, 3, 4)
+		// Then transform * p = point(2, 3, 6)
+		print_tuple(multiply_matrix_tuple(shearing_matrix(do_point(0, 0, 0), do_point(0, 0, 0), do_point(1, 0, 0)), do_point(2, 3, 4)));
+	}
+	{
+		// Scenario: A shearing transformation moves z in proportion to y
+		// Given transform ← shearing(0, 0, 0, 0, 0, 1)
+		// And p ← point(2, 3, 4)
+		// Then transform * p = point(2, 3, 7)
+		print_tuple(multiply_matrix_tuple(shearing_matrix(do_point(0, 0, 0), do_point(0, 0, 0), do_point(0, 1, 0)), do_point(2, 3, 4)));
+	}
+	{
+		printf("TEST Individual transformations are applied in sequence\n");
+		t_point p = do_point(1, 0, 1);
+		t_matrix A = rotation_x_matrix(PI / 2);
+		t_matrix B = scaling_matrix(5, 5, 5);
+		t_matrix C = translation_matrix(10, 5, 7);
+		t_point p2 = multiply_matrix_tuple(A, p);
+		print_tuple(p2);
+		t_point p3 = multiply_matrix_tuple(B, p2);
+		print_tuple(p3);
+		t_point p4 = multiply_matrix_tuple(C, p3);
+		print_tuple(p4);
+		printf("TEST Chained transformations must be applied in reverse order\n");
+		t_matrix T = multiply_matrix(C, multiply_matrix(B, A));
+		print_tuple(multiply_matrix_tuple(T, p));
+
 	}
 	return (0);
 }
