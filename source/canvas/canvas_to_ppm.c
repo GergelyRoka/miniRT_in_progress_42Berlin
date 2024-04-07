@@ -6,7 +6,7 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 16:19:31 by groka             #+#    #+#             */
-/*   Updated: 2024/04/02 18:16:18 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/07 19:10:43 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,28 +67,7 @@ void	canvas_to_ppm(t_color **canvas, int width, int height)
 	fclose (f);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 
 
 
@@ -166,3 +145,4 @@ int main(int argc, char const *argv[])
 	ft_cannon(arr, w, h);
 	canvas_to_ppm(arr, w, h);
 }
+*/

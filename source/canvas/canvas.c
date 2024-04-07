@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   canvas.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: groka <groka@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 20:15:02 by groka             #+#    #+#             */
-/*   Updated: 2024/04/01 20:23:04 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/07 19:11:27 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/canvas.h"
-#include "minirt.h"
 #include <stdlib.h>
 
-t_color **create_canvas(int width, int height)
+# define HEIGHT 500
+
+t_color	**create_canvas(int width, int height)
 {
 	int		i;
 	int		j;
@@ -42,7 +43,7 @@ t_color **create_canvas(int width, int height)
 
 void	write_pixel(t_color **canvas, int x, int y, t_color color)
 {
-	canvas[y][x] = color; //TEST coordinates 
+	canvas[y][x] = color;
 }
 
 void	free_canvas(t_color **canvas)
