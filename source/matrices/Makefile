@@ -9,6 +9,7 @@ matrix:
 trans:
 	cc matrices_a.c matrices_b.c matrices_c.c \
 	transformations_a.c \
+	transformations_b.c \
 	../tuples/tuples_a.c \
 	test_transformations.c \
 	-o test_transformations \
