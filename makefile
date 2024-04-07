@@ -6,7 +6,7 @@
 #    By: groka <groka@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/06 13:00:31 by groka             #+#    #+#              #
-#    Updated: 2024/04/07 17:31:06 by groka            ###   ########.fr        #
+#    Updated: 2024/04/07 17:36:24 by groka            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,5 +68,8 @@ fclean: clean
 	@make fclean -C $(LIBFT)
 
 re: clean all
+
+norminette:
+	norminette $(SRCS)
 
 .PHONY: all, clean, fclean, re, libmlx
