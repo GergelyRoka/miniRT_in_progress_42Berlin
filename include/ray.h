@@ -6,7 +6,7 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 21:07:36 by groka             #+#    #+#             */
-/*   Updated: 2024/04/07 21:22:44 by groka            ###   ########.fr       */
+/*   Updated: 2024/04/10 16:27:41 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct s_ray
 	t_vector	direction;
 }				t_ray;
 
+typedef struct s_intersection
+{
+	int			count;
+	double		xs[2];
+}				t_intersection;
+
 t_point	position(t_ray ray, float t);
+t_intersection	intersect(int s, t_ray ray);
 
 #endif
