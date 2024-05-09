@@ -6,7 +6,7 @@
 /*   By: groka <groka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 13:01:29 by groka             #+#    #+#             */
-/*   Updated: 2024/04/06 20:27:51 by groka            ###   ########.fr       */
+/*   Updated: 2024/05/09 15:43:01 by groka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <math.h>
-# include <MLX42/MLX42.h>
+//# include <MLX42/MLX42.h>
+# include "../lib/MLX42/include/MLX42/MLX42.h"
 //# include <libft/libft.h>"
 # include "../lib/libft/libft.h"
 
@@ -29,6 +30,7 @@
 # include "tuples.h"
 # include "canvas.h"
 # include "matrices.h"
+# include "ray.h"
 
 # define EPSILON 0.00001
 # define HEIGHT 540
@@ -130,9 +132,9 @@ typedef struct s_light
 */
 typedef struct s_sphere
 {
-	t_vec	coordinate;
+	t_point	coordinate;
 	double	diameter;
-	t_vec	color;
+	t_color	color;
 }	t_sphere;
 
 /** PLANE
